@@ -34,14 +34,10 @@ def convert_to_grain(output, structure):
 
 
 def main(input_file,output_file):
-    mmcif_parser = PDB.MMCIFParser()
     pdb_parser = PDB.PDBParser(QUIET=True)
     structure = pdb_parser.get_structure(input_file, input_file)
     convert_to_grain(args.output, structure)
 
-
-
-    # structure = structure_load(input_file)
 
     print(f"Plik zostal zapisany jako {output_file}")
 

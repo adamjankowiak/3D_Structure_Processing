@@ -5,7 +5,6 @@ from Bio.PDB.Structure import Structure
 import argparse
 
 def convert_to_full(input_file, output_file):
-    mmcif_parser = PDB.MMCIFParser()
     pdb_parser = PDB.PDBParser(QUIET=True)
     structure = pdb_parser.get_structure(input_file, input_file)
     template_adenine = pdb_parser.get_structure("adenine", 'templates/adenine.pdb')
@@ -47,6 +46,8 @@ def convert_to_full(input_file, output_file):
 
 def main(input_file,output_file):
     convert_to_full(input_file,output_file)
+
+    print(f"Plik zostal zapisany jako {output_file}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Przemiana z struktury pelnej na gruboziarnista")
