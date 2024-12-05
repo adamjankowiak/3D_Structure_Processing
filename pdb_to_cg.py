@@ -43,7 +43,7 @@ def main(input_file,output_file):
 
     # structure = structure_load(input_file)
 
-    print(f"Plik zostal zapisany jako {output_file} w katalogu Struktury")
+    print(f"Plik zostal zapisany jako {output_file}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Przemiana z struktury pelnej na gruboziarnista")
